@@ -1,0 +1,1353 @@
+Total Peaks: 193
+
+Peak 1:
+Time of Peak Center: 0.035499929999999846 minutes
+Duration: 0.018000000000000002 minutes
+Isomer A Intensity: 36889.333333333336
+Isomer B Intensity: 32523.166666666668
+A to B Ratio: 1.1342478950901664
+
+Peak 2:
+Time of Peak Center: 0.05099988 minutes
+Duration: 0.003 minutes
+Isomer A Intensity: 21562.0
+Isomer B Intensity: 16529.0
+A to B Ratio: 1.304495129771916
+
+Peak 3:
+Time of Peak Center: 0.09149992499999993 minutes
+Duration: 0.027 minutes
+Isomer A Intensity: 32662.555555555555
+Isomer B Intensity: 29006.222222222223
+A to B Ratio: 1.1260534138269183
+
+Peak 4:
+Time of Peak Center: 0.15299999499999983 minutes
+Duration: 0.03 minutes
+Isomer A Intensity: 33351.8
+Isomer B Intensity: 29684.1
+A to B Ratio: 1.1235577295589223
+
+Peak 5:
+Time of Peak Center: 0.22549986499999997 minutes
+Duration: 0.033 minutes
+Isomer A Intensity: 31393.090909090908
+Isomer B Intensity: 26927.81818181818
+A to B Ratio: 1.1658237847984174
+
+Peak 6:
+Time of Peak Center: 0.27899992500000015 minutes
+Duration: 0.03 minutes
+Isomer A Intensity: 32824.7
+Isomer B Intensity: 28928.4
+A to B Ratio: 1.1346877117296497
+
+Peak 7:
+Time of Peak Center: 0.3329999399999999 minutes
+Duration: 0.027 minutes
+Isomer A Intensity: 31764.666666666668
+Isomer B Intensity: 28282.88888888889
+A to B Ratio: 1.1231054504883204
+
+Peak 8:
+Time of Peak Center: 0.39549994499999985 minutes
+Duration: 0.033 minutes
+Isomer A Intensity: 32420.81818181818
+Isomer B Intensity: 26608.454545454544
+A to B Ratio: 1.2184404820067443
+
+Peak 9:
+Time of Peak Center: 0.46099984500000013 minutes
+Duration: 0.03 minutes
+Isomer A Intensity: 31178.9
+Isomer B Intensity: 25613.3
+A to B Ratio: 1.2172933593094213
+
+Peak 10:
+Time of Peak Center: 0.5259999050000002 minutes
+Duration: 0.03 minutes
+Isomer A Intensity: 29826.4
+Isomer B Intensity: 25044.3
+A to B Ratio: 1.1909456443182682
+
+Peak 11:
+Time of Peak Center: 0.5855000000000001 minutes
+Duration: 0.03 minutes
+Isomer A Intensity: 29518.2
+Isomer B Intensity: 22913.3
+A to B Ratio: 1.2882561656330604
+
+Peak 12:
+Time of Peak Center: 0.6384999749999998 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 31821.625
+Isomer B Intensity: 24195.25
+A to B Ratio: 1.315201330839731
+
+Peak 13:
+Time of Peak Center: 0.6884999250000003 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 31746.875
+Isomer B Intensity: 24217.375
+A to B Ratio: 1.3109131357135115
+
+Peak 14:
+Time of Peak Center: 0.7454998449999999 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 30636.875
+Isomer B Intensity: 21913.5
+A to B Ratio: 1.398082232413809
+
+Peak 15:
+Time of Peak Center: 0.8004999149999996 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 31083.5
+Isomer B Intensity: 22584.125
+A to B Ratio: 1.3763428957287476
+
+Peak 16:
+Time of Peak Center: 0.8545000549999999 minutes
+Duration: 0.027 minutes
+Isomer A Intensity: 29992.777777777777
+Isomer B Intensity: 21869.11111111111
+A to B Ratio: 1.3714676204895795
+
+Peak 17:
+Time of Peak Center: 0.9214999650000002 minutes
+Duration: 0.027 minutes
+Isomer A Intensity: 30626.0
+Isomer B Intensity: 19889.0
+A to B Ratio: 1.5398461461109156
+
+Peak 18:
+Time of Peak Center: 0.9684998950000003 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 31794.25
+Isomer B Intensity: 20428.5
+A to B Ratio: 1.556367329955699
+
+Peak 19:
+Time of Peak Center: 1.0185000849999999 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 31338.375
+Isomer B Intensity: 19864.5
+A to B Ratio: 1.577607037680284
+
+Peak 20:
+Time of Peak Center: 1.0824997400000003 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 31214.75
+Isomer B Intensity: 18802.125
+A to B Ratio: 1.6601713902019053
+
+Peak 21:
+Time of Peak Center: 1.137500045 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 31493.5
+Isomer B Intensity: 18605.25
+A to B Ratio: 1.692721140538289
+
+Peak 22:
+Time of Peak Center: 1.18449998 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 31362.0
+Isomer B Intensity: 18745.571428571428
+A to B Ratio: 1.6730351549699358
+
+Peak 23:
+Time of Peak Center: 1.237999915 minutes
+Duration: 0.018000000000000002 minutes
+Isomer A Intensity: 32029.166666666668
+Isomer B Intensity: 17341.5
+A to B Ratio: 1.8469663331699488
+
+Peak 24:
+Time of Peak Center: 1.286499735 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 31251.75
+Isomer B Intensity: 17017.125
+A to B Ratio: 1.8364882434606316
+
+Peak 25:
+Time of Peak Center: 1.3384997850000002 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 31968.0
+Isomer B Intensity: 17699.375
+A to B Ratio: 1.8061654719446307
+
+Peak 26:
+Time of Peak Center: 1.4005000549999997 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 32429.25
+Isomer B Intensity: 17368.75
+A to B Ratio: 1.867103274559194
+
+Peak 27:
+Time of Peak Center: 1.4535000299999998 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 32754.75
+Isomer B Intensity: 17435.875
+A to B Ratio: 1.8785836672951601
+
+Peak 28:
+Time of Peak Center: 1.503499745 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 33969.875
+Isomer B Intensity: 18154.5
+A to B Ratio: 1.8711545346883693
+
+Peak 29:
+Time of Peak Center: 1.56550002 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 33339.625
+Isomer B Intensity: 19258.25
+A to B Ratio: 1.7311866342995859
+
+Peak 30:
+Time of Peak Center: 1.6174998299999999 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 32346.714285714286
+Isomer B Intensity: 18730.714285714286
+A to B Ratio: 1.7269343705907028
+
+Peak 31:
+Time of Peak Center: 1.6664998500000001 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 31930.5
+Isomer B Intensity: 18521.875
+A to B Ratio: 1.7239345368651933
+
+Peak 32:
+Time of Peak Center: 1.728500125 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 29804.75
+Isomer B Intensity: 19013.875
+A to B Ratio: 1.5675263458921445
+
+Peak 33:
+Time of Peak Center: 1.776499985 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 31999.625
+Isomer B Intensity: 20262.125
+A to B Ratio: 1.5792827751284724
+
+Peak 34:
+Time of Peak Center: 1.8255000100000003 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 31481.85714285714
+Isomer B Intensity: 20040.285714285714
+A to B Ratio: 1.5709285581899317
+
+Peak 35:
+Time of Peak Center: 1.88399982 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 31051.375
+Isomer B Intensity: 21441.25
+A to B Ratio: 1.4482073106745175
+
+Peak 36:
+Time of Peak Center: 1.935499905 minutes
+Duration: 0.027 minutes
+Isomer A Intensity: 31306.88888888889
+Isomer B Intensity: 21929.555555555555
+A to B Ratio: 1.4276116453695167
+
+Peak 37:
+Time of Peak Center: 1.9904997349999998 minutes
+Duration: 0.027 minutes
+Isomer A Intensity: 30319.333333333332
+Isomer B Intensity: 21337.555555555555
+A to B Ratio: 1.4209375227819494
+
+Peak 38:
+Time of Peak Center: 2.053499935 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 33189.5
+Isomer B Intensity: 24267.875
+A to B Ratio: 1.3676310760624901
+
+Peak 39:
+Time of Peak Center: 2.101499795 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 34834.75
+Isomer B Intensity: 25566.75
+A to B Ratio: 1.36250207789414
+
+Peak 40:
+Time of Peak Center: 2.154499765 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 34292.5
+Isomer B Intensity: 25093.375
+A to B Ratio: 1.3665957648184033
+
+Peak 41:
+Time of Peak Center: 2.21749997 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 32306.714285714286
+Isomer B Intensity: 26333.0
+A to B Ratio: 1.2268527811382783
+
+Peak 42:
+Time of Peak Center: 2.273499725 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 30856.5
+Isomer B Intensity: 25285.25
+A to B Ratio: 1.220335966620856
+
+Peak 43:
+Time of Peak Center: 2.32649994 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 32057.875
+Isomer B Intensity: 26076.5
+A to B Ratio: 1.22937798400859
+
+Peak 44:
+Time of Peak Center: 2.38750005 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 33350.857142857145
+Isomer B Intensity: 29264.85714285714
+A to B Ratio: 1.139621388891601
+
+Peak 45:
+Time of Peak Center: 2.4384999250000003 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 31906.75
+Isomer B Intensity: 28311.375
+A to B Ratio: 1.126994008591953
+
+Peak 46:
+Time of Peak Center: 2.493499995 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 31941.625
+Isomer B Intensity: 28917.0
+A to B Ratio: 1.1045967769823979
+
+Peak 47:
+Time of Peak Center: 2.55549979 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 33204.25
+Isomer B Intensity: 31419.125
+A to B Ratio: 1.056816509053005
+
+Peak 48:
+Time of Peak Center: 2.60949993 minutes
+Duration: 0.027 minutes
+Isomer A Intensity: 32006.0
+Isomer B Intensity: 30037.777777777777
+A to B Ratio: 1.0655248945771991
+
+Peak 49:
+Time of Peak Center: 2.66350007 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 33492.5
+Isomer B Intensity: 31652.25
+A to B Ratio: 1.0581396267247984
+
+Peak 50:
+Time of Peak Center: 2.7279999200000002 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 31684.125
+Isomer B Intensity: 28896.75
+A to B Ratio: 1.0964598094941473
+
+Peak 51:
+Time of Peak Center: 2.776999945 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 35400.28571428572
+Isomer B Intensity: 32288.85714285714
+A to B Ratio: 1.0963623010149457
+
+Peak 52:
+Time of Peak Center: 2.82599997 minutes
+Duration: 0.018000000000000002 minutes
+Isomer A Intensity: 33533.333333333336
+Isomer B Intensity: 30413.166666666668
+A to B Ratio: 1.1025926270968167
+
+Peak 53:
+Time of Peak Center: 2.879999875 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 35022.142857142855
+Isomer B Intensity: 30200.0
+A to B Ratio: 1.1596736045411542
+
+Peak 54:
+Time of Peak Center: 2.9289999 minutes
+Duration: 0.018000000000000002 minutes
+Isomer A Intensity: 34452.333333333336
+Isomer B Intensity: 28535.833333333332
+A to B Ratio: 1.2073358058581318
+
+Peak 55:
+Time of Peak Center: 2.9779999249999998 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 34885.142857142855
+Isomer B Intensity: 29415.714285714286
+A to B Ratio: 1.1859356029333203
+
+Peak 56:
+Time of Peak Center: 3.036499735 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 32949.125
+Isomer B Intensity: 25815.25
+A to B Ratio: 1.2763434404082858
+
+Peak 57:
+Time of Peak Center: 3.0879998150000003 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 34657.142857142855
+Isomer B Intensity: 27243.714285714286
+A to B Ratio: 1.2721151930196217
+
+Peak 58:
+Time of Peak Center: 3.13800001 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 35641.71428571428
+Isomer B Intensity: 28107.14285714286
+A to B Ratio: 1.2680660736975855
+
+Peak 59:
+Time of Peak Center: 3.1929998349999997 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 35314.57142857143
+Isomer B Intensity: 25813.14285714286
+A to B Ratio: 1.3680849179819803
+
+Peak 60:
+Time of Peak Center: 3.2365000200000003 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 33564.71428571428
+Isomer B Intensity: 24070.428571428572
+A to B Ratio: 1.3944377511231918
+
+Peak 61:
+Time of Peak Center: 3.28149986 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 32330.14285714286
+Isomer B Intensity: 23489.428571428572
+A to B Ratio: 1.3763699171663848
+
+Peak 62:
+Time of Peak Center: 3.3364999299999996 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 35548.0
+Isomer B Intensity: 22949.14285714286
+A to B Ratio: 1.5489903139862053
+
+Peak 63:
+Time of Peak Center: 3.385499715 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 33008.625
+Isomer B Intensity: 22068.0
+A to B Ratio: 1.4957687601957586
+
+Peak 64:
+Time of Peak Center: 3.43350005 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 32358.375
+Isomer B Intensity: 21584.75
+A to B Ratio: 1.4991313311481487
+
+Peak 65:
+Time of Peak Center: 3.493499995 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 34824.0
+Isomer B Intensity: 21257.375
+A to B Ratio: 1.6382079160761853
+
+Peak 66:
+Time of Peak Center: 3.550999875 minutes
+Duration: 0.03 minutes
+Isomer A Intensity: 33599.4
+Isomer B Intensity: 20284.8
+A to B Ratio: 1.6563831045906297
+
+Peak 67:
+Time of Peak Center: 3.60699987 minutes
+Duration: 0.027 minutes
+Isomer A Intensity: 34027.555555555555
+Isomer B Intensity: 21188.11111111111
+A to B Ratio: 1.6059740000943927
+
+Peak 68:
+Time of Peak Center: 3.673999785 minutes
+Duration: 0.027 minutes
+Isomer A Intensity: 34650.444444444445
+Isomer B Intensity: 18999.666666666668
+A to B Ratio: 1.8237395977707211
+
+Peak 69:
+Time of Peak Center: 3.7309999449999998 minutes
+Duration: 0.027 minutes
+Isomer A Intensity: 33439.333333333336
+Isomer B Intensity: 18312.0
+A to B Ratio: 1.8260885393912918
+
+Peak 70:
+Time of Peak Center: 3.78149986 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 34599.857142857145
+Isomer B Intensity: 19297.571428571428
+A to B Ratio: 1.7929643256368308
+
+Peak 71:
+Time of Peak Center: 3.8364999299999996 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 35901.42857142857
+Isomer B Intensity: 18639.285714285714
+A to B Ratio: 1.9261161141981225
+
+Peak 72:
+Time of Peak Center: 3.88649988 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 36277.28571428572
+Isomer B Intensity: 18689.285714285714
+A to B Ratio: 1.9410739537550166
+
+Peak 73:
+Time of Peak Center: 3.93799972 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 36611.5
+Isomer B Intensity: 19168.875
+A to B Ratio: 1.9099451584926084
+
+Peak 74:
+Time of Peak Center: 3.99650001 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 37417.142857142855
+Isomer B Intensity: 17824.571428571428
+A to B Ratio: 2.0991889205911582
+
+Peak 75:
+Time of Peak Center: 4.052500005000001 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 34754.5
+Isomer B Intensity: 17162.5
+A to B Ratio: 2.0250254916241808
+
+Peak 76:
+Time of Peak Center: 4.1074998350000005 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 36506.25
+Isomer B Intensity: 17871.125
+A to B Ratio: 2.0427505263378776
+
+Peak 77:
+Time of Peak Center: 4.1759998750000005 minutes
+Duration: 0.027 minutes
+Isomer A Intensity: 35369.333333333336
+Isomer B Intensity: 18605.88888888889
+A to B Ratio: 1.9009751990110657
+
+Peak 78:
+Time of Peak Center: 4.229500055 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 36611.5
+Isomer B Intensity: 19527.0
+A to B Ratio: 1.8749167818917396
+
+Peak 79:
+Time of Peak Center: 4.282500025 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 36604.75
+Isomer B Intensity: 19095.875
+A to B Ratio: 1.9168930462730824
+
+Peak 80:
+Time of Peak Center: 4.344499825 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 33436.625
+Isomer B Intensity: 19405.5
+A to B Ratio: 1.723048877895442
+
+Peak 81:
+Time of Peak Center: 4.39950013 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 34874.75
+Isomer B Intensity: 20223.375
+A to B Ratio: 1.7244772447724477
+
+Peak 82:
+Time of Peak Center: 4.449499845 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 33950.375
+Isomer B Intensity: 19910.875
+A to B Ratio: 1.7051171784263626
+
+Peak 83:
+Time of Peak Center: 4.509499785 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 37892.0
+Isomer B Intensity: 23512.25
+A to B Ratio: 1.6115854501376943
+
+Peak 84:
+Time of Peak Center: 4.56450009 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 37970.875
+Isomer B Intensity: 23879.625
+A to B Ratio: 1.5900951124651246
+
+Peak 85:
+Time of Peak Center: 4.617499585 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 38128.75
+Isomer B Intensity: 24016.25
+A to B Ratio: 1.5876229636183834
+
+Peak 86:
+Time of Peak Center: 4.679499865 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 35472.75
+Isomer B Intensity: 24388.875
+A to B Ratio: 1.4544643818134293
+
+Peak 87:
+Time of Peak Center: 4.727 minutes
+Duration: 0.018000000000000002 minutes
+Isomer A Intensity: 37822.5
+Isomer B Intensity: 26223.666666666668
+A to B Ratio: 1.442304025625707
+
+Peak 88:
+Time of Peak Center: 4.77000022 minutes
+Duration: 0.018000000000000002 minutes
+Isomer A Intensity: 38350.333333333336
+Isomer B Intensity: 25896.0
+A to B Ratio: 1.4809365667799403
+
+Peak 89:
+Time of Peak Center: 4.823999639999999 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 36655.28571428572
+Isomer B Intensity: 27268.85714285714
+A to B Ratio: 1.3442178937773077
+
+Peak 90:
+Time of Peak Center: 4.874500035 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 37009.42857142857
+Isomer B Intensity: 28102.571428571428
+A to B Ratio: 1.3169410018401977
+
+Peak 91:
+Time of Peak Center: 4.922000165 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 33826.0
+Isomer B Intensity: 25116.571428571428
+A to B Ratio: 1.3467602493515949
+
+Peak 92:
+Time of Peak Center: 4.977999925000001 minutes
+Duration: 0.018000000000000002 minutes
+Isomer A Intensity: 37617.0
+Isomer B Intensity: 30716.5
+A to B Ratio: 1.2246512460729575
+
+Peak 93:
+Time of Peak Center: 5.0274999099999995 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 37100.142857142855
+Isomer B Intensity: 30315.85714285714
+A to B Ratio: 1.2237867028570621
+
+Peak 94:
+Time of Peak Center: 5.0775001 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 37362.142857142855
+Isomer B Intensity: 29695.571428571428
+A to B Ratio: 1.2581722142310783
+
+Peak 95:
+Time of Peak Center: 5.134500259999999 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 37053.57142857143
+Isomer B Intensity: 32446.285714285714
+A to B Ratio: 1.1419973230482028
+
+Peak 96:
+Time of Peak Center: 5.186499835 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 33261.75
+Isomer B Intensity: 27618.25
+A to B Ratio: 1.204339521874123
+
+Peak 97:
+Time of Peak Center: 5.235500095 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 35583.57142857143
+Isomer B Intensity: 30395.0
+A to B Ratio: 1.1707047681714566
+
+Peak 98:
+Time of Peak Center: 5.291500325 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 35556.625
+Isomer B Intensity: 28881.125
+A to B Ratio: 1.2311371181004895
+
+Peak 99:
+Time of Peak Center: 5.33799958 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 38106.42857142857
+Isomer B Intensity: 30956.0
+A to B Ratio: 1.2309868384619644
+
+Peak 100:
+Time of Peak Center: 5.384499785 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 35147.375
+Isomer B Intensity: 28942.5
+A to B Ratio: 1.2143862831476202
+
+Peak 101:
+Time of Peak Center: 5.43850016 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 39114.28571428572
+Isomer B Intensity: 31113.428571428572
+A to B Ratio: 1.2571512530189077
+
+Peak 102:
+Time of Peak Center: 5.487499475 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 35229.5
+Isomer B Intensity: 28011.75
+A to B Ratio: 1.2576686569029067
+
+Peak 103:
+Time of Peak Center: 5.5389997950000005 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 38081.71428571428
+Isomer B Intensity: 30095.714285714286
+A to B Ratio: 1.2653533963070203
+
+Peak 104:
+Time of Peak Center: 5.59650016 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 38297.28571428572
+Isomer B Intensity: 27780.0
+A to B Ratio: 1.3785919983544175
+
+Peak 105:
+Time of Peak Center: 5.6475002750000005 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 36348.5
+Isomer B Intensity: 25986.25
+A to B Ratio: 1.3987589590648901
+
+Peak 106:
+Time of Peak Center: 5.69949984 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 36957.142857142855
+Isomer B Intensity: 26157.428571428572
+A to B Ratio: 1.4128736988126835
+
+Peak 107:
+Time of Peak Center: 5.757499930000001 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 37910.625
+Isomer B Intensity: 24983.125
+A to B Ratio: 1.5174492782628275
+
+Peak 108:
+Time of Peak Center: 5.8104999 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 40286.75
+Isomer B Intensity: 26861.5
+A to B Ratio: 1.4997952459840291
+
+Peak 109:
+Time of Peak Center: 5.86149955 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 41292.71428571428
+Isomer B Intensity: 26677.14285714286
+A to B Ratio: 1.5478686944414692
+
+Peak 110:
+Time of Peak Center: 5.921499965 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 39139.57142857143
+Isomer B Intensity: 23792.285714285714
+A to B Ratio: 1.645053018385311
+
+Peak 111:
+Time of Peak Center: 5.97299981 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 37689.875
+Isomer B Intensity: 23304.625
+A to B Ratio: 1.6172701770571292
+
+Peak 112:
+Time of Peak Center: 6.026999709999999 minutes
+Duration: 0.027 minutes
+Isomer A Intensity: 35583.11111111111
+Isomer B Intensity: 22063.666666666668
+A to B Ratio: 1.6127469494845723
+
+Peak 113:
+Time of Peak Center: 6.090500115 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 38168.625
+Isomer B Intensity: 20950.625
+A to B Ratio: 1.8218370573670237
+
+Peak 114:
+Time of Peak Center: 6.140500305 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 37597.25
+Isomer B Intensity: 21069.625
+A to B Ratio: 1.7844290062115487
+
+Peak 115:
+Time of Peak Center: 6.186999555 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 38905.857142857145
+Isomer B Intensity: 21654.14285714286
+A to B Ratio: 1.7966934733703217
+
+Peak 116:
+Time of Peak Center: 6.24449992 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 37280.142857142855
+Isomer B Intensity: 18823.714285714286
+A to B Ratio: 1.9804881380629296
+
+Peak 117:
+Time of Peak Center: 6.2945001099999995 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 37654.0
+Isomer B Intensity: 19172.85714285714
+A to B Ratio: 1.9639222114596528
+
+Peak 118:
+Time of Peak Center: 6.34100032 minutes
+Duration: 0.018000000000000002 minutes
+Isomer A Intensity: 39268.666666666664
+Isomer B Intensity: 19875.666666666668
+A to B Ratio: 1.9757156992637561
+
+Peak 119:
+Time of Peak Center: 6.39499974 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 39563.71428571428
+Isomer B Intensity: 18451.85714285714
+A to B Ratio: 2.1441589309632016
+
+Peak 120:
+Time of Peak Center: 6.442499875 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 38658.57142857143
+Isomer B Intensity: 18285.428571428572
+A to B Ratio: 2.1141736589634212
+
+Peak 121:
+Time of Peak Center: 6.49050021 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 38229.28571428572
+Isomer B Intensity: 18195.0
+A to B Ratio: 2.1010874259019356
+
+Peak 122:
+Time of Peak Center: 6.54699969 minutes
+Duration: 0.018000000000000002 minutes
+Isomer A Intensity: 39704.833333333336
+Isomer B Intensity: 18360.5
+A to B Ratio: 2.1625137296551475
+
+Peak 123:
+Time of Peak Center: 6.5985000199999995 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 39434.42857142857
+Isomer B Intensity: 18469.0
+A to B Ratio: 2.1351685836498224
+
+Peak 124:
+Time of Peak Center: 6.648500220000001 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 37761.0
+Isomer B Intensity: 17590.571428571428
+A to B Ratio: 2.146661360793932
+
+Peak 125:
+Time of Peak Center: 6.7074997199999995 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 37687.875
+Isomer B Intensity: 18315.5
+A to B Ratio: 2.057703857388551
+
+Peak 126:
+Time of Peak Center: 6.75599982 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 40137.142857142855
+Isomer B Intensity: 20135.714285714286
+A to B Ratio: 1.9933309684285205
+
+Peak 127:
+Time of Peak Center: 6.80400012 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 40311.0
+Isomer B Intensity: 19810.714285714286
+A to B Ratio: 2.034808004326663
+
+Peak 128:
+Time of Peak Center: 6.86249947 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 39054.75
+Isomer B Intensity: 21238.875
+A to B Ratio: 1.838833271536275
+
+Peak 129:
+Time of Peak Center: 6.91399982 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 40997.142857142855
+Isomer B Intensity: 21543.714285714286
+A to B Ratio: 1.902974682704932
+
+Peak 130:
+Time of Peak Center: 6.962499869999999 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 38128.625
+Isomer B Intensity: 20429.5
+A to B Ratio: 1.8663513546587043
+
+Peak 131:
+Time of Peak Center: 7.0214998699999995 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 39134.0
+Isomer B Intensity: 22952.14285714286
+A to B Ratio: 1.70502598574674
+
+Peak 132:
+Time of Peak Center: 7.07299972 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 40726.125
+Isomer B Intensity: 23951.0
+A to B Ratio: 1.7003935117531628
+
+Peak 133:
+Time of Peak Center: 7.12549997 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 40050.75
+Isomer B Intensity: 23588.375
+A to B Ratio: 1.6979020386101205
+
+Peak 134:
+Time of Peak Center: 7.18400022 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 40818.71428571428
+Isomer B Intensity: 25494.0
+A to B Ratio: 1.601110625469298
+
+Peak 135:
+Time of Peak Center: 7.2344997200000005 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 40672.857142857145
+Isomer B Intensity: 25648.0
+A to B Ratio: 1.5858100882274309
+
+Peak 136:
+Time of Peak Center: 7.28549982 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 37683.5
+Isomer B Intensity: 23985.625
+A to B Ratio: 1.5710868488938687
+
+Peak 137:
+Time of Peak Center: 7.34449982 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 39921.0
+Isomer B Intensity: 27935.85714285714
+A to B Ratio: 1.4290236306641235
+
+Peak 138:
+Time of Peak Center: 7.39699962 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 41660.28571428572
+Isomer B Intensity: 28432.285714285714
+A to B Ratio: 1.465245746786852
+
+Peak 139:
+Time of Peak Center: 7.4504997699999995 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 39566.25
+Isomer B Intensity: 27417.75
+A to B Ratio: 1.4430888749076785
+
+Peak 140:
+Time of Peak Center: 7.515500319999999 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 38586.0
+Isomer B Intensity: 29513.875
+A to B Ratio: 1.3073850858282756
+
+Peak 141:
+Time of Peak Center: 7.56750037 minutes
+Duration: 0.024 minutes
+Isomer A Intensity: 41223.125
+Isomer B Intensity: 30478.125
+A to B Ratio: 1.3525479339690352
+
+Peak 142:
+Time of Peak Center: 7.62149982 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 41571.0
+Isomer B Intensity: 30600.571428571428
+A to B Ratio: 1.3585040428750164
+
+Peak 143:
+Time of Peak Center: 7.67900012 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 40092.142857142855
+Isomer B Intensity: 31199.285714285714
+A to B Ratio: 1.2850339980310903
+
+Peak 144:
+Time of Peak Center: 7.72949962 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 39414.71428571428
+Isomer B Intensity: 31226.14285714286
+A to B Ratio: 1.26223448301103
+
+Peak 145:
+Time of Peak Center: 7.7809998700000005 minutes
+Duration: 0.018000000000000002 minutes
+Isomer A Intensity: 41121.666666666664
+Isomer B Intensity: 32555.833333333332
+A to B Ratio: 1.2631120894872911
+
+Peak 146:
+Time of Peak Center: 7.83800007 minutes
+Duration: 0.018000000000000002 minutes
+Isomer A Intensity: 40430.666666666664
+Isomer B Intensity: 30153.5
+A to B Ratio: 1.340828317331874
+
+Peak 147:
+Time of Peak Center: 7.88349982 minutes
+Duration: 0.018000000000000002 minutes
+Isomer A Intensity: 43922.166666666664
+Isomer B Intensity: 32778.5
+A to B Ratio: 1.3399687803489075
+
+Peak 148:
+Time of Peak Center: 7.93049982 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 42844.42857142857
+Isomer B Intensity: 32521.571428571428
+A to B Ratio: 1.3174156933200383
+
+Peak 149:
+Time of Peak Center: 7.983999969999999 minutes
+Duration: 0.018000000000000002 minutes
+Isomer A Intensity: 42007.666666666664
+Isomer B Intensity: 29696.833333333332
+A to B Ratio: 1.4145503729353859
+
+Peak 150:
+Time of Peak Center: 8.02849982 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 40102.142857142855
+Isomer B Intensity: 27910.14285714286
+A to B Ratio: 1.4368304405464474
+
+Peak 151:
+Time of Peak Center: 8.07349992 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 39224.57142857143
+Isomer B Intensity: 27454.0
+A to B Ratio: 1.4287379408673209
+
+Peak 152:
+Time of Peak Center: 8.12849972 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 38178.142857142855
+Isomer B Intensity: 25525.0
+A to B Ratio: 1.4957156849027564
+
+Peak 153:
+Time of Peak Center: 8.17499997 minutes
+Duration: 0.018000000000000002 minutes
+Isomer A Intensity: 42755.666666666664
+Isomer B Intensity: 27837.166666666668
+A to B Ratio: 1.5359202026068264
+
+Peak 154:
+Time of Peak Center: 8.21800017 minutes
+Duration: 0.018000000000000002 minutes
+Isomer A Intensity: 43945.166666666664
+Isomer B Intensity: 29030.166666666668
+A to B Ratio: 1.51377589978241
+
+Peak 155:
+Time of Peak Center: 8.27099967 minutes
+Duration: 0.018000000000000002 minutes
+Isomer A Intensity: 44219.5
+Isomer B Intensity: 26685.0
+A to B Ratio: 1.6570919992505153
+
+Peak 156:
+Time of Peak Center: 8.31749992 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 42101.28571428572
+Isomer B Intensity: 25712.285714285714
+A to B Ratio: 1.6373995755225408
+
+Peak 157:
+Time of Peak Center: 8.36300012 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 39493.28571428572
+Isomer B Intensity: 23998.714285714286
+A to B Ratio: 1.6456417308070077
+
+Peak 158:
+Time of Peak Center: 8.41799997 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 46400.28571428572
+Isomer B Intensity: 25638.0
+A to B Ratio: 1.8098247021719993
+
+Peak 159:
+Time of Peak Center: 8.46849992 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 51403.42857142857
+Isomer B Intensity: 27549.428571428572
+A to B Ratio: 1.8658618794271076
+
+Peak 160:
+Time of Peak Center: 8.52700017 minutes
+Duration: 0.018000000000000002 minutes
+Isomer A Intensity: 48449.0
+Isomer B Intensity: 26428.0
+A to B Ratio: 1.8332450431360678
+
+Peak 161:
+Time of Peak Center: 8.58049987 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 42795.142857142855
+Isomer B Intensity: 22025.14285714286
+A to B Ratio: 1.9430131797426315
+
+Peak 162:
+Time of Peak Center: 8.62949967 minutes
+Duration: 0.018000000000000002 minutes
+Isomer A Intensity: 43187.666666666664
+Isomer B Intensity: 21419.333333333332
+A to B Ratio: 2.0162936910579226
+
+Peak 163:
+Time of Peak Center: 8.68100002 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 43095.42857142857
+Isomer B Intensity: 21813.85714285714
+A to B Ratio: 1.9755987347492094
+
+Peak 164:
+Time of Peak Center: 8.73499987 minutes
+Duration: 0.018000000000000002 minutes
+Isomer A Intensity: 44449.333333333336
+Isomer B Intensity: 20156.0
+A to B Ratio: 2.2052655950254683
+
+Peak 165:
+Time of Peak Center: 8.78349997 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 39063.57142857143
+Isomer B Intensity: 18412.714285714286
+A to B Ratio: 2.1215542055567194
+
+Peak 166:
+Time of Peak Center: 8.83149982 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 43031.42857142857
+Isomer B Intensity: 19785.85714285714
+A to B Ratio: 2.1748579432639477
+
+Peak 167:
+Time of Peak Center: 8.88900022 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 44217.28571428572
+Isomer B Intensity: 19038.571428571428
+A to B Ratio: 2.3225106925789754
+
+Peak 168:
+Time of Peak Center: 8.93799947 minutes
+Duration: 0.018000000000000002 minutes
+Isomer A Intensity: 43312.666666666664
+Isomer B Intensity: 19159.5
+A to B Ratio: 2.260636585853841
+
+Peak 169:
+Time of Peak Center: 8.98349977 minutes
+Duration: 0.018000000000000002 minutes
+Isomer A Intensity: 45363.666666666664
+Isomer B Intensity: 19234.833333333332
+A to B Ratio: 2.3584122555433287
+
+Peak 170:
+Time of Peak Center: 9.03750012 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 46242.42857142857
+Isomer B Intensity: 19366.428571428572
+A to B Ratio: 2.387762328034522
+
+Peak 171:
+Time of Peak Center: 9.08749987 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 43509.0
+Isomer B Intensity: 18605.571428571428
+A to B Ratio: 2.3384930781102438
+
+Peak 172:
+Time of Peak Center: 9.13549972 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 44267.57142857143
+Isomer B Intensity: 19347.428571428572
+A to B Ratio: 2.2880338472443733
+
+Peak 173:
+Time of Peak Center: 9.194000019999999 minutes
+Duration: 0.018000000000000002 minutes
+Isomer A Intensity: 47552.0
+Isomer B Intensity: 20940.833333333332
+A to B Ratio: 2.2707787814875244
+
+Peak 174:
+Time of Peak Center: 9.24300027 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 46895.57142857143
+Isomer B Intensity: 20269.14285714286
+A to B Ratio: 2.31364353979307
+
+Peak 175:
+Time of Peak Center: 9.29199957 minutes
+Duration: 0.018000000000000002 minutes
+Isomer A Intensity: 46829.166666666664
+Isomer B Intensity: 20446.5
+A to B Ratio: 2.290326787795792
+
+Peak 176:
+Time of Peak Center: 9.34449982 minutes
+Duration: 0.018000000000000002 minutes
+Isomer A Intensity: 46128.0
+Isomer B Intensity: 22556.333333333332
+A to B Ratio: 2.045013226144911
+
+Peak 177:
+Time of Peak Center: 9.39250017 minutes
+Duration: 0.018000000000000002 minutes
+Isomer A Intensity: 42641.666666666664
+Isomer B Intensity: 21066.333333333332
+A to B Ratio: 2.0241617747116254
+
+Peak 178:
+Time of Peak Center: 9.43799947 minutes
+Duration: 0.018000000000000002 minutes
+Isomer A Intensity: 44643.166666666664
+Isomer B Intensity: 21774.166666666668
+A to B Ratio: 2.050281296643576
+
+Peak 179:
+Time of Peak Center: 9.49049972 minutes
+Duration: 0.018000000000000002 minutes
+Isomer A Intensity: 45196.333333333336
+Isomer B Intensity: 24168.666666666668
+A to B Ratio: 1.8700383416544837
+
+Peak 180:
+Time of Peak Center: 9.53349997 minutes
+Duration: 0.018000000000000002 minutes
+Isomer A Intensity: 45075.666666666664
+Isomer B Intensity: 23885.0
+A to B Ratio: 1.887195589979764
+
+Peak 181:
+Time of Peak Center: 9.576500170000001 minutes
+Duration: 0.018000000000000002 minutes
+Isomer A Intensity: 44297.666666666664
+Isomer B Intensity: 23857.5
+A to B Ratio: 1.856760627335918
+
+Peak 182:
+Time of Peak Center: 9.626999620000001 minutes
+Duration: 0.018000000000000002 minutes
+Isomer A Intensity: 44881.666666666664
+Isomer B Intensity: 26325.333333333332
+A to B Ratio: 1.704885028363047
+
+Peak 183:
+Time of Peak Center: 9.66999982 minutes
+Duration: 0.018000000000000002 minutes
+Isomer A Intensity: 42294.333333333336
+Isomer B Intensity: 24887.0
+A to B Ratio: 1.6994548693427627
+
+Peak 184:
+Time of Peak Center: 9.71300007 minutes
+Duration: 0.018000000000000002 minutes
+Isomer A Intensity: 43017.5
+Isomer B Intensity: 25445.333333333332
+A to B Ratio: 1.690585045063928
+
+Peak 185:
+Time of Peak Center: 9.765499819999999 minutes
+Duration: 0.018000000000000002 minutes
+Isomer A Intensity: 46215.833333333336
+Isomer B Intensity: 28515.666666666668
+A to B Ratio: 1.620717266531848
+
+Peak 186:
+Time of Peak Center: 9.81449962 minutes
+Duration: 0.021 minutes
+Isomer A Intensity: 46286.142857142855
+Isomer B Intensity: 28746.0
+A to B Ratio: 1.610176819632048
+
+Peak 187:
+Time of Peak Center: 9.86349987 minutes
+Duration: 0.018000000000000002 minutes
+Isomer A Intensity: 45868.666666666664
+Isomer B Intensity: 28906.333333333332
+A to B Ratio: 1.586803353359702
+
+Peak 188:
+Time of Peak Center: 9.91400027 minutes
+Duration: 0.018000000000000002 minutes
+Isomer A Intensity: 42665.333333333336
+Isomer B Intensity: 28813.5
+A to B Ratio: 1.480741087800279
+
+Peak 189:
+Time of Peak Center: 9.95449992 minutes
+Duration: 0.018000000000000002 minutes
+Isomer A Intensity: 46586.166666666664
+Isomer B Intensity: 30978.5
+A to B Ratio: 1.5038225435920611
+
+Peak 190:
+Time of Peak Center: 9.99250007 minutes
+Duration: 0.018000000000000002 minutes
+Isomer A Intensity: 46749.5
+Isomer B Intensity: 31399.5
+A to B Ratio: 1.488861287600121
+
+Peak 191:
+Time of Peak Center: 10.04299997 minutes
+Duration: 0.018000000000000002 minutes
+Isomer A Intensity: 49842.0
+Isomer B Intensity: 34481.333333333336
+A to B Ratio: 1.4454777464135182
+
+Peak 192:
+Time of Peak Center: 10.08800007 minutes
+Duration: 0.018000000000000002 minutes
+Isomer A Intensity: 52567.833333333336
+Isomer B Intensity: 36299.166666666664
+A to B Ratio: 1.4481829243095574
+
+Peak 193:
+Time of Peak Center: nan minutes
+Duration: 0.015 minutes
+Isomer A Intensity: 53010.4
+Isomer B Intensity: 36696.0
+A to B Ratio: 1.4445825158055374
+
