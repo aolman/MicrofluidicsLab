@@ -6,8 +6,9 @@ from helpers import *
 # FIND WAY TO FIND PEAKS MORE ACCURATELY, NOT COUNTING THE ASCENT AND DESCENT ON EITHER SIDE
 # FIND WAY TO CALCULATE THRESHOLD FOR COUNTING A PEAK
 # FIND WAY TO CALCULATE THRESHOLD FOR MERGED DROPLETS
-# INCORPORATE MOLECULE C TO GET MORE ACCURATE RATIOS
-# FIND dt OF EACH TIME INTERVAL
+
+# FIND WAY TO CALCULATE SPLIT DROPS
+# 
 
 # get data from excel sheet
 # spreadsheetName = input("Spreadsheet Name: ")
@@ -15,8 +16,7 @@ df = pd.read_excel("realDataTraining.xlsx", sheet_name="S1", usecols=['Time (min
 time = df['Time (min)'].to_numpy()
 IsoA = df['Isomer 57'].to_numpy()
 IsoB = df['Isomer 77'].to_numpy()
-IntStand = df['Internal standard'].to_numpy()
-IntStandAverage = np.nanmean(IntStand)
+intStand = df['Internal standard'].to_numpy()
 
 # set any places where the reading is zero to one for sake of taking log later
 
@@ -50,6 +50,7 @@ peakEdges = peakS + peakE
 
 IsoAIntensities = findPeakIntensities(peakEdges, IsoA, time)
 IsoBIntensities = findPeakIntensities(peakEdges, IsoB, time)
+intStandIntensities = findPeakIntensities(peakEdges, intStand, time)
 
 # returns duration and center for each peak
 
@@ -63,38 +64,37 @@ peakDurations, IsoAIntensities, IsoBIntensities, peakCenters = removeSpikes(peak
 potentialMerged = findPotentialMergedDrops(peakDurations)
 calibratedAIntensities = calibrateData(IsoAIntensities)
 calibratedBIntensities = calibrateData(IsoBIntensities)
-print(IntStandAverage)
 
 dataOut = {'Peak Number' : range(1, peakCenters.size + 1),
            'Peak Center' : peakCenters,
            'Peak Duration' : peakDurations,
            'Calibrated 57 Intensity' : calibratedAIntensities,
            'Calibrated 77 Intensity' : calibratedBIntensities,
-           'Internal Standard' : np.array(peakCenters.size, IntStandAverage),
+           'Internal Standard' : intStandIntensities,
            'Uncalibrated 57 Intensity' : IsoAIntensities,
            'Uncalibrated 77 Intensity' : IsoBIntensities,
            'Calibrated Ratio' : calibratedAIntensities / (calibratedAIntensities + calibratedBIntensities),
-           'Yield' : (calibratedAIntensities + calibratedBIntensities) / IntStandAverage,
-           'Calibrated 57 / Internal Standard Ratio' : calibratedAIntensities / IntStandAverage,
-           'Calibrated 77 / Internal Standard Ratio' : calibratedBIntensities / IntStandAverage}
+           'Yield' : (calibratedAIntensities + calibratedBIntensities) / intStandIntensities,
+           'Calibrated 57 / Internal Standard Ratio' : calibratedAIntensities / intStandIntensities,
+           'Calibrated 77 / Internal Standard Ratio' : calibratedBIntensities / intStandIntensities}
 
 dfOut = pd.DataFrame(dataOut)
 dfOut.to_excel('S1output.xlsx', index=False, engine='openpyxl')
 
-with open('SHEET1OUTPUT.txt', 'w') as file:
-    file.write(f'Total Peaks: {peakCenters.size}\n\n')
-    if potentialMerged.size > 0:
-        file.write('POTENTIAL MERGED PEAKS\n')
-        for i in range(potentialMerged.size):
-            file.write(f'Peak {potentialMerged[i]+1}\n')
-        file.write('\n')
-    for i in range(peakCenters.size):
-        file.write(f'Peak {i + 1}:\n')
-        file.write(f'Time of Peak Center: {round(peakCenters[i], 3)} minutes\n')
-        file.write(f'Duration: {round(peakDurations[i], 3)} minutes\n')
-        file.write(f'Isomer A Intensity: {round(IsoAIntensities[i], 3)}\n')
-        file.write(f'Isomer B Intensity: {round(IsoBIntensities[i], 3)}\n')
-        file.write(f'A to B Ratio: {round(IsoAIntensities[i] / IsoBIntensities[i], 3)}\n\n')
+# with open('SHEET1OUTPUT.txt', 'w') as file:
+#     file.write(f'Total Peaks: {peakCenters.size}\n\n')
+#     if potentialMerged.size > 0:
+#         file.write('POTENTIAL MERGED PEAKS\n')
+#         for i in range(potentialMerged.size):
+#             file.write(f'Peak {potentialMerged[i]+1}\n')
+#         file.write('\n')
+#     for i in range(peakCenters.size):
+#         file.write(f'Peak {i + 1}:\n')
+#         file.write(f'Time of Peak Center: {round(peakCenters[i], 3)} minutes\n')
+#         file.write(f'Duration: {round(peakDurations[i], 3)} minutes\n')
+#         file.write(f'Isomer A Intensity: {round(IsoAIntensities[i], 3)}\n')
+#         file.write(f'Isomer B Intensity: {round(IsoBIntensities[i], 3)}\n')
+#         file.write(f'A to B Ratio: {round(IsoAIntensities[i] / IsoBIntensities[i], 3)}\n\n')
 
 
 # plt.subplot(2, 1,1)
