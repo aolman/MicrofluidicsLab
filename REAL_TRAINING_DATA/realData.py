@@ -8,16 +8,17 @@ from helpers import *
 # FIND WAY TO CALCULATE THRESHOLD FOR MERGED DROPLETS
 
 # FIND WAY TO CALCULATE SPLIT DROPS
-# 
+# ADD A WAY TO OMIT CERTAIN TIME SEGMENTS
 
 # get data from excel sheet
 # spreadsheetName = input("Spreadsheet Name: ")
-df = pd.read_excel("realDataTraining.xlsx", sheet_name="S1", usecols=['Time (min)', 'Isomer 77', 'Isomer 57', 'Internal standard'])
+df = pd.read_excel("8x8updatedData10-20.xlsx", usecols=['Time (min)', 'Isomer 77', 'Isomer 57', 'Internal standard'])
 time = df['Time (min)'].to_numpy()
 IsoA = df['Isomer 57'].to_numpy()
 IsoB = df['Isomer 77'].to_numpy()
 intStand = df['Internal standard'].to_numpy()
 
+time, IsoA, IsoB, intStand = omitTimes(time, IsoA, IsoB, intStand, 1.7, time[time.size - 1])
 # set any places where the reading is zero to one for sake of taking log later
 
 IsoA = np.where(IsoA <= 0, 1, IsoA)
@@ -32,7 +33,7 @@ loggedB = np.log10(IsoB)
 
 loggedSum = loggedA + loggedB
 min = findMinAboveThreshold(loggedSum, 4)
-THRESHOLD = 8
+THRESHOLD = 3
 peakInd = np.where(loggedSum > THRESHOLD, 1, 0)
 
 # find the start and end of each peak
@@ -57,29 +58,33 @@ intStandIntensities = findPeakIntensities(peakEdges, intStand, time)
 peakDurations = findPeakDurations(peakEdges, time)
 peakCenters = getTimesOfPeakCenters(peakEdges, time)
 
+intStandIntensities, peakDurations, peakCenters, IsoAIntensities, IsoBIntensities = deleteRandomNoise(intStandIntensities, peakDurations, peakCenters, IsoAIntensities, IsoBIntensities)
+
 # based on duration of peak, remove peaks with very low durations (spikes)
 
-peakDurations, IsoAIntensities, IsoBIntensities, peakCenters = removeSpikes(peakDurations, IsoAIntensities, IsoBIntensities, peakCenters)
+potentialSplit = findPotentialSpikes(peakDurations, IsoAIntensities, IsoBIntensities, peakCenters)
 
 potentialMerged = findPotentialMergedDrops(peakDurations)
 calibratedAIntensities = calibrateData(IsoAIntensities)
 calibratedBIntensities = calibrateData(IsoBIntensities)
 
 dataOut = {'Peak Number' : range(1, peakCenters.size + 1),
-           'Peak Center' : peakCenters,
-           'Peak Duration' : peakDurations,
-           'Calibrated 57 Intensity' : calibratedAIntensities,
-           'Calibrated 77 Intensity' : calibratedBIntensities,
-           'Internal Standard' : intStandIntensities,
-           'Uncalibrated 57 Intensity' : IsoAIntensities,
-           'Uncalibrated 77 Intensity' : IsoBIntensities,
-           'Calibrated Ratio' : calibratedAIntensities / (calibratedAIntensities + calibratedBIntensities),
-           'Yield' : (calibratedAIntensities + calibratedBIntensities) / intStandIntensities,
-           'Calibrated 57 / Internal Standard Ratio' : calibratedAIntensities / intStandIntensities,
-           'Calibrated 77 / Internal Standard Ratio' : calibratedBIntensities / intStandIntensities}
+           'Peak Center' : np.round(peakCenters, 3),
+           'Peak Duration' : np.round(peakDurations, 3),
+           'Calibrated 57 Intensity' : np.round(calibratedAIntensities, 3),
+           'Calibrated 77 Intensity' : np.round(calibratedBIntensities, 3),
+           'Internal Standard' : np.round(intStandIntensities, 3),
+           'Uncalibrated 57 Intensity' : np.round(IsoAIntensities, 3),
+           'Uncalibrated 77 Intensity' : np.round(IsoBIntensities, 3),
+           'Calibrated Ratio' : np.round(calibratedAIntensities / (calibratedAIntensities + calibratedBIntensities), 3),
+           'Yield' : np.round((calibratedAIntensities + calibratedBIntensities) / intStandIntensities, 3),
+           'Calibrated 57 / Internal Standard Ratio' : np.round(calibratedAIntensities / intStandIntensities, 3),
+           'Calibrated 77 / Internal Standard Ratio' : np.round(calibratedBIntensities / intStandIntensities, 3),
+           'Potential Merged Peaks' : potentialMerged + 1,
+           'Potential Split Peaks' : potentialSplit + 1}
 
-dfOut = pd.DataFrame(dataOut)
-dfOut.to_excel('S1output.xlsx', index=False, engine='openpyxl')
+dfOut = pd.DataFrame.from_dict(dataOut, orient='index').transpose()
+dfOut.to_excel('8x8updatedOutput.xlsx', index=False, engine='openpyxl')
 
 # with open('SHEET1OUTPUT.txt', 'w') as file:
 #     file.write(f'Total Peaks: {peakCenters.size}\n\n')
@@ -100,9 +105,9 @@ dfOut.to_excel('S1output.xlsx', index=False, engine='openpyxl')
 # plt.subplot(2, 1,1)
 # plt.plot(time,loggedSum)
 # ax = plt.gca()
-# ax.set_xlim([6.3, 6.5])
-# ax.set_ylim([0, 15])
-
+# ax.set_xlim([6, 8])
+# ax.set_ylim([0, 9])
+# plt.show()
 # plt.subplot(2,1,2)
 # plt.plot(time,IsoA)
 # ax = plt.gca()

@@ -99,23 +99,29 @@ def moving_average(data, window_size):
 # Finds any potential drops that have been merged
 
 def findPotentialMergedDrops(durations):
-    MIN_DURATION = 0.05
+    meanDuration = np.mean(durations)
     potentialMerged = []
     for d in range(len(durations)):
-        if durations[d] >= MIN_DURATION:
+        if durations[d] >= meanDuration * 1.5:
             potentialMerged.append(d)
+    potentialMerged = np.array(potentialMerged)
     return np.array(potentialMerged)
 
-def removeSpikes(durations, intensitiesA, intensitiesB, centers):
+def findPotentialSpikes(durations, intensitiesA, intensitiesB, centers):
+    meanDuration = np.mean(durations)
     indList = []
     for i in range(len(durations) - 1, -1, -1):
-        if durations[i] < 0.01:
+        if durations[i] < meanDuration * 0.55:
             indList.append(i)
-    durations = np.delete(durations, indList)
-    intensitiesA = np.delete(intensitiesA, indList)
-    intensitiesB = np.delete(intensitiesB, indList)
-    centers = np.delete(centers, indList)
-    return durations, intensitiesA, intensitiesB, centers
+    # durations = np.delete(durations, indList)
+    # intensitiesA = np.delete(intensitiesA, indList)
+    # intensitiesB = np.delete(intensitiesB, indList)
+    # centersOfRemovedSpikes = centers[indList]
+    # centers = np.delete(centers, indList)
+    # return durations, intensitiesA, intensitiesB, centers, indList
+    indList.sort()
+    indList = np.array(indList)
+    return indList
 
 def calibrateData(IsoIntensities):
     calibrated = IsoIntensities.copy()
@@ -123,5 +129,29 @@ def calibrateData(IsoIntensities):
     for i in range(calibrated.size):
         calibrated[i] = calibrated[i] - min
     return calibrated
-    
-    
+  
+  # OMITTED TIME MUST NOT BE IN MIDST OF PEAK 
+  # MAYBE PASS PEAK START AND END TO ENSURE THAT IT IS NOT IN PEAK
+            
+def omitTimes(time, IsoA, IsoB, intStand, omittedStart, omittedEnd):
+    indList = []
+    for i in range(time.size - 1, -1, -1):
+        if time[i] < omittedStart or time[i] > omittedEnd:
+            indList.append(i)
+    IsoA = np.delete(IsoA, indList)
+    IsoB = np.delete(IsoB, indList)
+    intStand = np.delete(intStand, indList)
+    time = np.delete(time, indList)
+    return time, IsoA, IsoB, intStand
+
+def deleteRandomNoise(intStandIntensities, durations, centers, AIntensities, BIntensities):
+    indList = []
+    for i in range(len(durations) - 1, -1, -1):
+        if intStandIntensities[i] == 0:
+            indList.append(i)
+    intStandIntensities = np.delete(intStandIntensities, indList)
+    durations = np.delete(durations, indList)
+    AIntensities = np.delete(AIntensities, indList)
+    BIntensities = np.delete(BIntensities, indList)
+    centers = np.delete(centers, indList)
+    return intStandIntensities, durations, centers, AIntensities, BIntensities
