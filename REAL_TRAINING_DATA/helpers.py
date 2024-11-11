@@ -1,6 +1,17 @@
 import pandas as pd
 import numpy as np
 
+# class Peak:
+    
+#     _peakDuration = 0
+#     _peakIntensity = 0
+#     _peakCenter = 0
+#     _calibratedIntensity = 0
+#     _uncalibratedIntensity = 0
+#     _internalStandard = 0
+#     _yield = 0
+    
+    
 # Finds all of the starts to the peaks
 
 def findPeakStart(Ind):
@@ -27,11 +38,14 @@ def findPeakIntensities(peakEdges, Iso, time):
     count = 0
     isPeak = False
     
+    # iterate thru all peak edges
     for i in range(peakEdges.size):
+        # if in a peak, add count to how many points you've been inside and add the intensity
         if (isPeak):
             count += 1
             intensity += Iso[i]
         
+        # if reached the end of the peak, do calculations and set everything back to zero
         if peakEdges[i] == 1 and isPeak:
             avgIntensity = intensity / count
             peakIntensities.append(avgIntensity)
@@ -39,6 +53,8 @@ def findPeakIntensities(peakEdges, Iso, time):
             count = 0
             isPeak = False
             continue
+        
+        # if at start of peak, start counting
         if peakEdges[i] == 1 and not isPeak:
             isPeak = True
             
@@ -52,7 +68,9 @@ def findPeakDurations(peakEdges, time):
     end = 0
     duration = 0
     
+    # iterate thru peak edges
     for i in range(peakEdges.size):
+        # calculate the duration based on begin and end time of the peak
         if peakEdges[i] == 1 and isPeak:
             end = time[i]
             duration = end - begin
@@ -60,6 +78,7 @@ def findPeakDurations(peakEdges, time):
             isPeak = False
             continue
         
+        #if at peak start, record begin time
         if peakEdges[i] == 1 and not isPeak:
             begin = time[i]
             isPeak = True
@@ -71,12 +90,16 @@ def getTimesOfPeakCenters(peakEdges, time):
     peakCenters = []
     isPeak = False
     startOfPeakIndex = 0
+    
+    # iterate thru peak edges
     for i in range(peakEdges.size):
+        # if at start of peak, take that index
         if (not isPeak and peakEdges[i] == 1):
             startOfPeakIndex = i
             isPeak = True
             continue
             
+        # at end of peak calculate the midpoint
         if(isPeak and peakEdges[i] == 1):
             peakCenter = (time[startOfPeakIndex] + time[i]) / 2
             peakCenters.append(peakCenter)
@@ -101,7 +124,9 @@ def moving_average(data, window_size):
 def findPotentialMergedDrops(durations):
     meanDuration = np.mean(durations)
     potentialMerged = []
+    
     for d in range(len(durations)):
+        # if a duration is 1.5x the length of the mean, mark as sus
         if durations[d] >= meanDuration * 1.5:
             potentialMerged.append(d)
     potentialMerged = np.array(potentialMerged)
@@ -111,6 +136,7 @@ def findPotentialSpikes(durations, intensitiesA, intensitiesB, centers):
     meanDuration = np.mean(durations)
     indList = []
     for i in range(len(durations) - 1, -1, -1):
+        # if duration is .55x the length of the mean, mark as sus
         if durations[i] < meanDuration * 0.55:
             indList.append(i)
     # durations = np.delete(durations, indList)
@@ -127,6 +153,7 @@ def calibrateData(IsoIntensities):
     calibrated = IsoIntensities.copy()
     min = np.min(calibrated)
     for i in range(calibrated.size):
+        # subtract the baseline from all vals
         calibrated[i] = calibrated[i] - min
     return calibrated
   
@@ -136,8 +163,11 @@ def calibrateData(IsoIntensities):
 def omitTimes(time, IsoA, IsoB, intStand, omittedStart, omittedEnd):
     indList = []
     for i in range(time.size - 1, -1, -1):
+        # if time is above or below omitted times, omit them
         if time[i] < omittedStart or time[i] > omittedEnd:
             indList.append(i)
+            
+    # delete from all other data sets
     IsoA = np.delete(IsoA, indList)
     IsoB = np.delete(IsoB, indList)
     intStand = np.delete(intStand, indList)

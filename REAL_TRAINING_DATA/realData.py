@@ -7,44 +7,44 @@ from helpers import *
 # FIND WAY TO CALCULATE THRESHOLD FOR COUNTING A PEAK
 # FIND WAY TO CALCULATE THRESHOLD FOR MERGED DROPLETS
 
-# FIND WAY TO CALCULATE SPLIT DROPS
-# ADD A WAY TO OMIT CERTAIN TIME SEGMENTS
-
 # get data from excel sheet
 # spreadsheetName = input("Spreadsheet Name: ")
-df = pd.read_excel("8x8updatedData10-20.xlsx", usecols=['Time (min)', 'Isomer 77', 'Isomer 57', 'Internal standard'])
+df = pd.read_excel("20241111 for Aidan redo.xlsx", usecols=['Time (min)', '77 iso', '57 iso', 'IS'])
 time = df['Time (min)'].to_numpy()
-IsoA = df['Isomer 57'].to_numpy()
-IsoB = df['Isomer 77'].to_numpy()
-intStand = df['Internal standard'].to_numpy()
+IsoA = df['57 iso'].to_numpy()
+IsoB = df['77 iso'].to_numpy()
+intStand = df['IS'].to_numpy()
+
+#omit any times that may not be a part of the data we want to look at
 
 time, IsoA, IsoB, intStand = omitTimes(time, IsoA, IsoB, intStand, 1.7, time[time.size - 1])
-# set any places where the reading is zero to one for sake of taking log later
+
+# set any places where the reading is  <= 0 to one for sake of taking log later
 
 IsoA = np.where(IsoA <= 0, 1, IsoA)
 IsoB = np.where(IsoB <= 0, 1, IsoB)
 
 # take log of both isomers to even out peaks
 
-loggedA = np.log10(IsoA)
-loggedB = np.log10(IsoB)
+# loggedA = np.log10(IsoA)
+# loggedB = np.log10(IsoB)
 
-#sum them together into one array and find the indices of the peaks
+# sum them together into one array and find the indices of the peaks
 
-loggedSum = loggedA + loggedB
-min = findMinAboveThreshold(loggedSum, 4)
-THRESHOLD = 3
-peakInd = np.where(loggedSum > THRESHOLD, 1, 0)
-
+# loggedSum = loggedA + loggedB
+# THRESHOLD = 3
+# determining whether I want to use a logged sum or molecule C for finding peaks
+# peakInd = np.where(loggedSum > THRESHOLD, 1, 0)
+intStandMean = np.nanmean(intStand)
+peakInd = np.where(intStand > (intStandMean / 4), 1, 0)
 # find the start and end of each peak
 
-peakS = findPeakStart(peakInd.copy())
-peakE = findPeakEnd(peakInd.copy())
+peakStart = findPeakStart(peakInd.copy())
+peakEnd = findPeakEnd(peakInd.copy())
 
 #combine start and end into one array
 
-peakEdges = peakS + peakE
-
+peakEdges = peakStart + peakEnd
 # iterate through the array to find how long each peak is and the avg intensity
 
 # returns intensity for each peak   
@@ -60,22 +60,25 @@ peakCenters = getTimesOfPeakCenters(peakEdges, time)
 
 intStandIntensities, peakDurations, peakCenters, IsoAIntensities, IsoBIntensities = deleteRandomNoise(intStandIntensities, peakDurations, peakCenters, IsoAIntensities, IsoBIntensities)
 
-# based on duration of peak, remove peaks with very low durations (spikes)
+# based on duration of peak, remove peaks with very low durations (spikes) or very long durations (merged)
 
 potentialSplit = findPotentialSpikes(peakDurations, IsoAIntensities, IsoBIntensities, peakCenters)
-
 potentialMerged = findPotentialMergedDrops(peakDurations)
+
+# calibrate the data based on the zero values
 calibratedAIntensities = calibrateData(IsoAIntensities)
 calibratedBIntensities = calibrateData(IsoBIntensities)
+
+# create a dataframe and make it an excel sheet
 
 dataOut = {'Peak Number' : range(1, peakCenters.size + 1),
            'Peak Center' : np.round(peakCenters, 3),
            'Peak Duration' : np.round(peakDurations, 3),
-           'Calibrated 57 Intensity' : np.round(calibratedAIntensities, 3),
-           'Calibrated 77 Intensity' : np.round(calibratedBIntensities, 3),
-           'Internal Standard' : np.round(intStandIntensities, 3),
-           'Uncalibrated 57 Intensity' : np.round(IsoAIntensities, 3),
-           'Uncalibrated 77 Intensity' : np.round(IsoBIntensities, 3),
+           'Calibrated 57 Intensity' : np.round(calibratedAIntensities),
+           'Calibrated 77 Intensity' : np.round(calibratedBIntensities),
+           'Internal Standard' : np.round(intStandIntensities),
+           'Uncalibrated 57 Intensity' : np.round(IsoAIntensities),
+           'Uncalibrated 77 Intensity' : np.round(IsoBIntensities),
            'Calibrated Ratio' : np.round(calibratedAIntensities / (calibratedAIntensities + calibratedBIntensities), 3),
            'Yield' : np.round((calibratedAIntensities + calibratedBIntensities) / intStandIntensities, 3),
            'Calibrated 57 / Internal Standard Ratio' : np.round(calibratedAIntensities / intStandIntensities, 3),
@@ -84,7 +87,7 @@ dataOut = {'Peak Number' : range(1, peakCenters.size + 1),
            'Potential Split Peaks' : potentialSplit + 1}
 
 dfOut = pd.DataFrame.from_dict(dataOut, orient='index').transpose()
-dfOut.to_excel('8x8updatedOutput.xlsx', index=False, engine='openpyxl')
+dfOut.to_excel('20241111output.xlsx', index=False, engine='openpyxl')
 
 # with open('SHEET1OUTPUT.txt', 'w') as file:
 #     file.write(f'Total Peaks: {peakCenters.size}\n\n')
@@ -102,15 +105,9 @@ dfOut.to_excel('8x8updatedOutput.xlsx', index=False, engine='openpyxl')
 #         file.write(f'A to B Ratio: {round(IsoAIntensities[i] / IsoBIntensities[i], 3)}\n\n')
 
 
-# plt.subplot(2, 1,1)
-# plt.plot(time,loggedSum)
-# ax = plt.gca()
-# ax.set_xlim([6, 8])
-# ax.set_ylim([0, 9])
-# plt.show()
-# plt.subplot(2,1,2)
-# plt.plot(time,IsoA)
-# ax = plt.gca()
-# ax.set_xlim([6.3, 6.5])
-# ax.set_ylim([0, 200000])
-# plt.show()
+plt.plot(time,IsoA)
+ax = plt.gca()
+ax.set_xlim([8, 10])
+ax.set_ylim([0, 15000])
+plt.show()
+
