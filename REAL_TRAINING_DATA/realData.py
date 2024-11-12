@@ -14,10 +14,11 @@ time = df['Time (min)'].to_numpy()
 IsoA = df['57 iso'].to_numpy()
 IsoB = df['77 iso'].to_numpy()
 intStand = df['IS'].to_numpy()
+newRowMol = df['MolD'].to_numpy()
 
-#omit any times that may not be a part of the data we want to look at
+# omit any times that may not be a part of the data we want to look at
 
-time, IsoA, IsoB, intStand = omitTimes(time, IsoA, IsoB, intStand, 1.7, time[time.size - 1])
+# time, IsoA, IsoB, intStand = omitTimes(time, IsoA, IsoB, intStand, 1.7, time[time.size - 1])
 
 # set any places where the reading is  <= 0 to one for sake of taking log later
 
@@ -26,15 +27,8 @@ IsoB = np.where(IsoB <= 0, 1, IsoB)
 
 # take log of both isomers to even out peaks
 
-# loggedA = np.log10(IsoA)
-# loggedB = np.log10(IsoB)
-
 # sum them together into one array and find the indices of the peaks
 
-# loggedSum = loggedA + loggedB
-# THRESHOLD = 3
-# determining whether I want to use a logged sum or molecule C for finding peaks
-# peakInd = np.where(loggedSum > THRESHOLD, 1, 0)
 intStandMean = np.nanmean(intStand)
 peakInd = np.where(intStand > (intStandMean / 4), 1, 0)
 # find the start and end of each peak
@@ -49,16 +43,17 @@ peakEdges = peakStart + peakEnd
 
 # returns intensity for each peak   
 
-IsoAIntensities = findPeakIntensities(peakEdges, IsoA, time)
-IsoBIntensities = findPeakIntensities(peakEdges, IsoB, time)
-intStandIntensities = findPeakIntensities(peakEdges, intStand, time)
+IsoAIntensities = findPeakIntensities(peakEdges, IsoA)
+IsoBIntensities = findPeakIntensities(peakEdges, IsoB)
+intStandIntensities = findPeakIntensities(peakEdges, intStand)
 
-# returns duration and center for each peak
+# find durations, centers, and new rows
 
 peakDurations = findPeakDurations(peakEdges, time)
 peakCenters = getTimesOfPeakCenters(peakEdges, time)
+newRowLocations = findNewRows(peakEdges, newRowMol)
 
-intStandIntensities, peakDurations, peakCenters, IsoAIntensities, IsoBIntensities = deleteRandomNoise(intStandIntensities, peakDurations, peakCenters, IsoAIntensities, IsoBIntensities)
+# intStandIntensities, peakDurations, peakCenters, IsoAIntensities, IsoBIntensities = deleteRandomNoise(intStandIntensities, peakDurations, peakCenters, IsoAIntensities, IsoBIntensities)
 
 # based on duration of peak, remove peaks with very low durations (spikes) or very long durations (merged)
 
@@ -105,9 +100,9 @@ dfOut.to_excel('20241111output.xlsx', index=False, engine='openpyxl')
 #         file.write(f'A to B Ratio: {round(IsoAIntensities[i] / IsoBIntensities[i], 3)}\n\n')
 
 
-plt.plot(time,IsoA)
-ax = plt.gca()
-ax.set_xlim([8, 10])
-ax.set_ylim([0, 15000])
-plt.show()
+# plt.plot(time,IsoA)
+# ax = plt.gca()
+# ax.set_xlim([8, 10])
+# ax.set_ylim([0, 15000])
+# plt.show()
 

@@ -32,7 +32,7 @@ def findPeakEnd(Ind):
 
 # Calculates peak duration and intensities
 
-def findPeakIntensities(peakEdges, Iso, time):
+def findPeakIntensities(peakEdges, iso):
     peakIntensities = []
     intensity = 0
     count = 0
@@ -41,9 +41,9 @@ def findPeakIntensities(peakEdges, Iso, time):
     # iterate thru all peak edges
     for i in range(peakEdges.size):
         # if in a peak, add count to how many points you've been inside and add the intensity
-        if (isPeak):
+        if isPeak:
             count += 1
-            intensity += Iso[i]
+            intensity += iso[i]
         
         # if reached the end of the peak, do calculations and set everything back to zero
         if peakEdges[i] == 1 and isPeak:
@@ -60,6 +60,26 @@ def findPeakIntensities(peakEdges, Iso, time):
             
     peakIntensities = np.array(peakIntensities)
     return peakIntensities
+
+def findNewRows(peakEdges, newRowMol):
+    newRowLocs = []
+    isPeak = False
+    isNewRow = False
+    
+    for i in range(peakEdges.size):
+        if isPeak and newRowMol[i] > 0 and not isNewRow:
+            isNewRow = True
+        
+        if peakEdges[i] == 1 and isPeak:
+            isPeak = False
+            newRowLocs.append(isNewRow)
+            isNewRow = False
+            continue
+        
+        if peakEdges[i] == 1 and not isPeak:
+            isPeak = True
+    
+    return newRowLocs
 
 def findPeakDurations(peakEdges, time):
     peakDurations = []
