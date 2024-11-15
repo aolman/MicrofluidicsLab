@@ -67,7 +67,7 @@ def findNewRows(peakEdges, newRowMol):
     isNewRow = False
     
     for i in range(peakEdges.size):
-        if isPeak and newRowMol[i] > 0 and not isNewRow:
+        if isPeak and newRowMol[i] > np.mean(newRowMol) and not isNewRow:
             isNewRow = True
         
         if peakEdges[i] == 1 and isPeak:
@@ -79,7 +79,7 @@ def findNewRows(peakEdges, newRowMol):
         if peakEdges[i] == 1 and not isPeak:
             isPeak = True
     
-    return newRowLocs
+    return np.array(newRowLocs)
 
 def findPeakDurations(peakEdges, time):
     peakDurations = []
@@ -194,6 +194,37 @@ def omitTimes(time, IsoA, IsoB, intStand, omittedStart, omittedEnd):
     time = np.delete(time, indList)
     return time, IsoA, IsoB, intStand
 
+def createListOfWells(newRowLocations):
+    wellList = []
+    letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
+    numbers = ['1', '2', '3', '4', '5', '6', '7', '8']
+
+    numberDirection = 1
+    letterIndex = 7
+    numberIndex = 0
+    
+    for i in range(newRowLocations.size):
+        
+        if newRowLocations[i]:
+            numberDirection *= -1
+            if letterIndex == 0:
+                letterIndex = 7
+            else:
+                letterIndex -= 1 
+                 
+            wellList.append(letters[letterIndex] + numbers[numberIndex])
+            print(letters[letterIndex] + numbers[numberIndex])
+            
+            continue
+        
+        if i % 3 == 0 and i != 0:
+            numberIndex += numberDirection
+            
+        wellList.append(letters[letterIndex] + numbers[numberIndex])
+        print(letters[letterIndex] + numbers[numberIndex])
+    return np.array(wellList)
+    
+    
 def deleteRandomNoise(intStandIntensities, durations, centers, AIntensities, BIntensities):
     indList = []
     for i in range(len(durations) - 1, -1, -1):

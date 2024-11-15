@@ -9,12 +9,12 @@ from helpers import *
 
 # get data from excel sheet
 # spreadsheetName = input("Spreadsheet Name: ")
-df = pd.read_excel("20241111 for Aidan redo.xlsx", usecols=['Time (min)', '77 iso', '57 iso', 'IS'])
+df = pd.read_excel("20241114.xlsx", usecols=['Time (min)', 'Isomer 77', 'Isomer 57', 'IS', 'Marker'])
 time = df['Time (min)'].to_numpy()
-IsoA = df['57 iso'].to_numpy()
-IsoB = df['77 iso'].to_numpy()
+IsoA = df['Isomer 57'].to_numpy()
+IsoB = df['Isomer 77'].to_numpy()
 intStand = df['IS'].to_numpy()
-newRowMol = df['MolD'].to_numpy()
+newRowMol = df['Marker'].to_numpy()
 
 # omit any times that may not be a part of the data we want to look at
 
@@ -66,6 +66,11 @@ calibratedBIntensities = calibrateData(IsoBIntensities)
 
 # create a dataframe and make it an excel sheet
 
+# create well list
+
+wellList = createListOfWells(newRowLocations)
+print(wellList)
+
 dataOut = {'Peak Number' : range(1, peakCenters.size + 1),
            'Peak Center' : np.round(peakCenters, 3),
            'Peak Duration' : np.round(peakDurations, 3),
@@ -79,10 +84,11 @@ dataOut = {'Peak Number' : range(1, peakCenters.size + 1),
            'Calibrated 57 / Internal Standard Ratio' : np.round(calibratedAIntensities / intStandIntensities, 3),
            'Calibrated 77 / Internal Standard Ratio' : np.round(calibratedBIntensities / intStandIntensities, 3),
            'Potential Merged Peaks' : potentialMerged + 1,
-           'Potential Split Peaks' : potentialSplit + 1}
+           'Potential Split Peaks' : potentialSplit + 1,
+           'Well' : wellList}
 
-dfOut = pd.DataFrame.from_dict(dataOut, orient='index').transpose()
-dfOut.to_excel('20241111output.xlsx', index=False, engine='openpyxl')
+# dfOut = pd.DataFrame.from_dict(dataOut, orient='index').transpose()
+# dfOut.to_excel('20241111output.xlsx', index=False, engine='openpyxl')
 
 # with open('SHEET1OUTPUT.txt', 'w') as file:
 #     file.write(f'Total Peaks: {peakCenters.size}\n\n')
