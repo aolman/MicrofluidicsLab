@@ -194,34 +194,35 @@ def omitTimes(time, IsoA, IsoB, intStand, omittedStart, omittedEnd):
     time = np.delete(time, indList)
     return time, IsoA, IsoB, intStand
 
-def createListOfWells(newRowLocations):
+def createListOfWells(newRowLocations, numRows, numColumns):
     wellList = []
-    letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
-    numbers = ['1', '2', '3', '4', '5', '6', '7', '8']
+    letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O']
 
-    numberDirection = 1
-    letterIndex = 7
-    numberIndex = 0
+    letterIndex = numRows - 1
+    wellNumber = numColumns
     
     for i in range(newRowLocations.size):
         
-        if newRowLocations[i]:
-            numberDirection *= -1
+        if newRowLocations[i] and i != 0:
+            # implement what to do when encounter new row
             if letterIndex == 0:
-                letterIndex = 7
+                letterIndex = numRows - 1
             else:
-                letterIndex -= 1 
-                 
-            wellList.append(letters[letterIndex] + numbers[numberIndex])
-            print(letters[letterIndex] + numbers[numberIndex])
-            
+                letterIndex -= 1
+            wellNumber = numColumns
+            position = letters[letterIndex] + str(wellNumber)
+            wellList.append(position)
+            print(position)
             continue
         
         if i % 3 == 0 and i != 0:
-            numberIndex += numberDirection
-            
-        wellList.append(letters[letterIndex] + numbers[numberIndex])
-        print(letters[letterIndex] + numbers[numberIndex])
+            # every three, we want to move to the next well
+            wellNumber -= 1
+        # append to well list and return
+        position = letters[letterIndex] + str(wellNumber)
+        print(position)
+        wellList.append(position)
+        
     return np.array(wellList)
     
     

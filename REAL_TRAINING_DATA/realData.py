@@ -9,7 +9,7 @@ from helpers import *
 
 # get data from excel sheet
 # spreadsheetName = input("Spreadsheet Name: ")
-df = pd.read_excel("20241114.xlsx", usecols=['Time (min)', 'Isomer 77', 'Isomer 57', 'IS', 'Marker'])
+df = pd.read_excel("20241116.xlsx", usecols=['Time (min)', 'Isomer 77', 'Isomer 57', 'IS', 'Marker'])
 time = df['Time (min)'].to_numpy()
 IsoA = df['Isomer 57'].to_numpy()
 IsoB = df['Isomer 77'].to_numpy()
@@ -51,6 +51,7 @@ intStandIntensities = findPeakIntensities(peakEdges, intStand)
 
 peakDurations = findPeakDurations(peakEdges, time)
 peakCenters = getTimesOfPeakCenters(peakEdges, time)
+# entire list is false???
 newRowLocations = findNewRows(peakEdges, newRowMol)
 
 # intStandIntensities, peakDurations, peakCenters, IsoAIntensities, IsoBIntensities = deleteRandomNoise(intStandIntensities, peakDurations, peakCenters, IsoAIntensities, IsoBIntensities)
@@ -68,7 +69,7 @@ calibratedBIntensities = calibrateData(IsoBIntensities)
 
 # create well list
 
-wellList = createListOfWells(newRowLocations)
+wellList = createListOfWells(newRowLocations, 6, 4)
 print(wellList)
 
 dataOut = {'Peak Number' : range(1, peakCenters.size + 1),
