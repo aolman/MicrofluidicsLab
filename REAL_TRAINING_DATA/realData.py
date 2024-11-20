@@ -70,7 +70,6 @@ calibratedBIntensities = calibrateData(IsoBIntensities)
 # create well list
 
 wellList = createListOfWells(newRowLocations, 6, 4)
-print(wellList)
 
 dataOut = {'Peak Number' : range(1, peakCenters.size + 1),
            'Peak Center' : np.round(peakCenters, 3),
@@ -88,8 +87,8 @@ dataOut = {'Peak Number' : range(1, peakCenters.size + 1),
            'Potential Split Peaks' : potentialSplit + 1,
            'Well' : wellList}
 
-# dfOut = pd.DataFrame.from_dict(dataOut, orient='index').transpose()
-# dfOut.to_excel('20241111output.xlsx', index=False, engine='openpyxl')
+dfOut = pd.DataFrame.from_dict(dataOut, orient='index').transpose()
+dfOut.to_excel('20241116output.xlsx', index=False, engine='openpyxl')
 
 # with open('SHEET1OUTPUT.txt', 'w') as file:
 #     file.write(f'Total Peaks: {peakCenters.size}\n\n')

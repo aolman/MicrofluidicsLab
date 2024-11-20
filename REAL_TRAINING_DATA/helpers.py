@@ -67,7 +67,7 @@ def findNewRows(peakEdges, newRowMol):
     isNewRow = False
     
     for i in range(peakEdges.size):
-        if isPeak and newRowMol[i] > np.mean(newRowMol) and not isNewRow:
+        if isPeak and newRowMol[i] > np.nanmean(newRowMol) and not isNewRow:
             isNewRow = True
         
         if peakEdges[i] == 1 and isPeak:
@@ -203,7 +203,7 @@ def createListOfWells(newRowLocations, numRows, numColumns):
     
     for i in range(newRowLocations.size):
         
-        if newRowLocations[i] and i != 0:
+        if newRowLocations[i] and not newRowLocations[i-1] and not newRowLocations[i-2] and i != 0 and i != 1 and i != 2:
             # implement what to do when encounter new row
             if letterIndex == 0:
                 letterIndex = numRows - 1
@@ -212,7 +212,6 @@ def createListOfWells(newRowLocations, numRows, numColumns):
             wellNumber = numColumns
             position = letters[letterIndex] + str(wellNumber)
             wellList.append(position)
-            print(position)
             continue
         
         if i % 3 == 0 and i != 0:
@@ -220,7 +219,6 @@ def createListOfWells(newRowLocations, numRows, numColumns):
             wellNumber -= 1
         # append to well list and return
         position = letters[letterIndex] + str(wellNumber)
-        print(position)
         wellList.append(position)
         
     return np.array(wellList)
