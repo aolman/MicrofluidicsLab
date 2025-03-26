@@ -194,7 +194,7 @@ def omitTimes(time, IsoA, IsoB, intStand, omittedStart, omittedEnd):
     time = np.delete(time, indList)
     return time, IsoA, IsoB, intStand
 
-def createListOfWells(newRowLocations, numRows, numColumns):
+def createListOfWells(newRowLocations, numRows, numColumns, num_droplets):
     wellList = []
     letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O']
 
@@ -203,7 +203,7 @@ def createListOfWells(newRowLocations, numRows, numColumns):
     
     for i in range(newRowLocations.size):
         
-        if newRowLocations[i] and not newRowLocations[i-1] and not newRowLocations[i-2] and i != 0 and i != 1 and i != 2:
+        if newRowLocations[i] and not newRowLocations[i-1] and i > 0:
             # implement what to do when encounter new row
             if letterIndex == 0:
                 letterIndex = numRows - 1
@@ -214,8 +214,8 @@ def createListOfWells(newRowLocations, numRows, numColumns):
             wellList.append(position)
             continue
         
-        if i % 3 == 0 and i != 0:
-            # every three, we want to move to the next well
+        if i % num_droplets == 0 and i != 0:
+            # after a well, we want to move to the next well
             wellNumber -= 1
         # append to well list and return
         position = letters[letterIndex] + str(wellNumber)
@@ -235,3 +235,17 @@ def deleteRandomNoise(intStandIntensities, durations, centers, AIntensities, BIn
     BIntensities = np.delete(BIntensities, indList)
     centers = np.delete(centers, indList)
     return intStandIntensities, durations, centers, AIntensities, BIntensities
+
+def createHeatmapArray(calibrated_intensity, rows, cols, num_droplets):
+    calibrated_intensity.reverse()
+    intensity_per_well = []
+    row = []
+    for i, intensity in enumerate(calibrated_intensity):
+        if (i % cols == 0 and i != 0):
+            intensity_per_well.append(row)
+            row = []
+        
+        if (i % num_droplets == 1):
+            row.append(intensity)
+    
+    return intensity_per_well
